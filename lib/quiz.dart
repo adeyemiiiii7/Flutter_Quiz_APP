@@ -3,7 +3,7 @@ import 'package:quiz_app/questions_screen.dart';
 import 'package:quiz_app/start_screen.dart';
 
 class Quiz extends StatefulWidget {
-  const Quiz({super.key});
+  const Quiz({Key? key}) : super(key: key);
 
   @override
   State<Quiz> createState() {
@@ -14,16 +14,21 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   //storing the start screen widget in active screen widget
   //print('variables can restrictive for some specific things so you could use widgets ');
-  Widget activeScreen = const StartScreen(switchScreen);
+  Widget? activeScreen;
 
   @override
   void initState() {
     activeScreen = StartScreen(switchScreen);
-    // TODO: implement initState
     super.initState();
   }
 
   void switchScreen() {
+    setState(() {
+      activeScreen = const QuestionsScreen();
+    });
+  }
+
+  void onStartQuiz() {
     setState(() {
       activeScreen = const QuestionsScreen();
     });
