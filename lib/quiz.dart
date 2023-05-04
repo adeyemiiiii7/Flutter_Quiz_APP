@@ -15,8 +15,9 @@ class _QuizState extends State<Quiz> {
   //storing the start screen widget in active screen widget
   //print('variables can restrictive for some specific things so you could use widgets ');
   Widget? activeScreen;
-
+  //var activeScreen = 'start-screen';
   @override
+  //tenary in dart
   void initState() {
     activeScreen = StartScreen(switchScreen);
     super.initState();
@@ -24,6 +25,7 @@ class _QuizState extends State<Quiz> {
 
   void switchScreen() {
     setState(() {
+      // activeScreen = 'question-screen';
       activeScreen = const QuestionsScreen();
     });
   }
@@ -49,7 +51,10 @@ class _QuizState extends State<Quiz> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           )),
-          child: activeScreen, // use the active screen widget here
+          child: activeScreen,
+          // child: activeScreen == 'start-screen'
+          //     ? StartScreen(switchScreen)
+          //     : QuestionsScreen(),
         ),
       ),
     );

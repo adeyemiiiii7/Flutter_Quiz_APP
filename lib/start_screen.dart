@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class StartScreen extends StatelessWidget {
   const StartScreen(this.onStartQuiz, {Key? key});
 
+  // Declare a final variable of type VoidCallback which will be called when the start quiz button is pressed
   final VoidCallback onStartQuiz;
 
   @override
@@ -11,6 +12,7 @@ class StartScreen extends StatelessWidget {
         child: Column(
       mainAxisSize: MainAxisSize.min,
       children: [
+        // Add a quiz logo image to the center of the screen with reduced opacity
         Opacity(
           opacity: 0.1,
           child: Image.asset(
@@ -19,6 +21,7 @@ class StartScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 80),
+        // Add a text "Learn Flutter!" to the center of the screen with font size 28
         const Text(
           "Learn Flutter!",
           style: TextStyle(
@@ -26,6 +29,7 @@ class StartScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 30),
+        // Add a button with arrow icon and text "Start Quiz" which calls onStartQuiz function when pressed
         OutlinedButton.icon(
           onPressed: onStartQuiz,
           style: OutlinedButton.styleFrom(
