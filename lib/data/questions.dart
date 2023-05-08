@@ -1,7 +1,7 @@
 import 'package:quiz_app/models/quiz_questions.dart';
 
 List<QuizQuestion> quizQuestions = [
-  QuizQuestion(
+  const QuizQuestion(
     'What are the main building blocks of Flutter UIs?',
     [
       'Widgets',
@@ -10,7 +10,7 @@ List<QuizQuestion> quizQuestions = [
       'Functions',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'How are Flutter UIs built?',
     [
       'By combining widgets in code',
@@ -19,7 +19,7 @@ List<QuizQuestion> quizQuestions = [
       'By using XCode for iOS and Android Studio for Android',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'What\'s the purpose of a StatefulWidget?',
     [
       'Update UI as data changes',
@@ -28,7 +28,7 @@ List<QuizQuestion> quizQuestions = [
       'Render UI that does not depend on data',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
     [
       'StatelessWidget',
@@ -37,7 +37,7 @@ List<QuizQuestion> quizQuestions = [
       'None of the above',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'What happens if you change data in a StatelessWidget?',
     [
       'The UI is not updated',
@@ -46,7 +46,7 @@ List<QuizQuestion> quizQuestions = [
       'Any nested StatefulWidgets are updated',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'How should you update data inside of StatefulWidgets?',
     [
       'By calling setState()',
@@ -55,7 +55,7 @@ List<QuizQuestion> quizQuestions = [
       'By calling updateState()',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'What is the default alignment for widgets in a Column?',
     [
       'center',
@@ -64,11 +64,11 @@ List<QuizQuestion> quizQuestions = [
       'start',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'Which widget should you use to create a clickable button?',
     ['RaisedButton', 'Container', 'Image', 'Text'],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'How can you pass data between two screens in Flutter?',
     [
       'Using a navigator widget',
@@ -77,7 +77,7 @@ List<QuizQuestion> quizQuestions = [
       'using a global variable'
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'Which widget is used to add an image to your app?',
     [
       'image.assest',
@@ -86,7 +86,7 @@ List<QuizQuestion> quizQuestions = [
       'image',
     ],
   ),
-  QuizQuestion(
+  const QuizQuestion(
     'Which widget is used to create a scrollable list of items?',
     [
       'ListView',
