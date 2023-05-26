@@ -10,7 +10,7 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: const [
+    return const Column(children: [
       Text('The question...'),
     ]);
   }

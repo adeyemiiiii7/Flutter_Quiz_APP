@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.onStartQuiz, {Key? key});
+  const StartScreen(this.onStartQuiz, {super.key, Key? ke});
 
   // Declare a final variable of type VoidCallback which will be called when the start quiz button is pressed
   final VoidCallback onStartQuiz;
