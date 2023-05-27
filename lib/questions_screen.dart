@@ -17,7 +17,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             currentQuestion.text,

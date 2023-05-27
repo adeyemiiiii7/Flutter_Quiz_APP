@@ -22,7 +22,7 @@ class AnswerButton extends StatelessWidget {
           // Set the background color to grey
         ),
       ),
-      child: const Text("AnswerText"),
+      child: Text(answerText),
     );
   }
 }
