@@ -12,9 +12,15 @@ class AnswerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.grey, // Set the background color to grey
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+        backgroundColor: Colors.grey,
+        foregroundColor: Colors.black26,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+          // Set the background color to grey
+        ),
       ),
       child: const Text("AnswerText"),
     );
