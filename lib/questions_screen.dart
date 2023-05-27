@@ -1,37 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/answer_button.dart';
+import 'package:quiz_app/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  const QuestionsScreen({Key? key}) : super(key: key);
 
   @override
-  State<QuestionsScreen> createState() => _QuestionsScreenState();
+  _QuestionsScreenState createState() => _QuestionsScreenState();
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
+    final currentQuestion = questions[0];
+
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Text('The question...',
-              style: TextStyle(
-                color: Colors.white,
-              )),
+          Text(
+            currentQuestion.text,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
+          ),
           const SizedBox(height: 30),
-          AnswerButton(answerText: 'Answer Text...', onTap: () {}),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
-          // Answer(),
+          AnswerButton(
+            answerText: currentQuestion.answers[0],
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: currentQuestion.answers[1],
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: currentQuestion.answers[2],
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: currentQuestion.answers[3],
+            onTap: () {},
+          ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[4],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[5],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[6],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[7],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[8],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[9],
+          //   onTap: () {},
+          // ),
+          // AnswerButton(
+          //   answerText: currentQuestion.answers[10],
+          //   onTap: () {},
+          // ),
         ],
       ),
     );
