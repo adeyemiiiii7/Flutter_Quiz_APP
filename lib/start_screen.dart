@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.onStartQuiz, {Key? key}) : super(key: key);
+  const StartScreen({
+    Key? key,
+    required this.onStartQuiz,
+  }) : super(key: key);
 
-  // Declare a final variable of type VoidCallback which will be called when the start quiz button is pressed
   final VoidCallback onStartQuiz;
 
   @override
@@ -13,7 +15,6 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Add a quiz logo image to the center of the screen with reduced opacity
           Opacity(
             opacity: 0.1,
             child: Image.asset(
@@ -22,7 +23,6 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 80),
-          // Add a text "Learn Flutter!" to the center of the screen with font size 28
           Text(
             "Learn Flutter!",
             style: GoogleFonts.poppins(
@@ -32,7 +32,6 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          // Add a button with arrow icon and text "Start Quiz" which calls onStartQuiz function when pressed
           OutlinedButton.icon(
             onPressed: onStartQuiz,
             style: OutlinedButton.styleFrom(
