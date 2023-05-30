@@ -20,7 +20,8 @@ class ResultsScreen extends StatelessWidget {
           'questions': questions[i].text,
           //we create a correct_answers map that will store the current questions and
           //the correct answer is the first option in each question
-          'correct_answer': questions[i].answers[0]
+          'correct_answer': questions[i].answers[0],
+          'user_answer': chosenAnswers[i],
         },
       );
     }
