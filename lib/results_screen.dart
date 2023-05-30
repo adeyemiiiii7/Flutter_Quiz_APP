@@ -3,11 +3,30 @@
 /// the widget's constructor to display the list of answers. The widget is built using a `SizedBox` and
 /// a `Container` with a `Column` of child widgets, including `Text` and `TextButton` widgets.
 import 'package:flutter/material.dart';
+import 'package:quiz_app/data/questions.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
   //passing data into a widget, it must be passed in a constructor function method
   final List<String> chosenAnswers;
+
+  List<Map<String, Object>> getSummaryData() {
+    List<Map<String, Object>> summary = [];
+    for (var i = 0; i < chosenAnswers.length; i++) {
+      summary.add(
+        {
+          'question_index': i,
+          //questions[i].text stores the questions answers and text
+          'questions': questions[i].text,
+          //we create a correct_answers map that will store the current questions and
+          //the correct answer is the first option in each question
+          'correct_answer': questions[i].answers[0]
+        },
+      );
+    }
+
+    return summary;
+  }
 
   @override
   Widget build(BuildContext context) {

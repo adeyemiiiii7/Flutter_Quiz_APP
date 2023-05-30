@@ -1,3 +1,5 @@
+/// The Quiz class is a stateful widget that manages the flow of the quiz app by switching between the
+/// start screen, question screen, and results screen based on user interactions.
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_screen.dart';
