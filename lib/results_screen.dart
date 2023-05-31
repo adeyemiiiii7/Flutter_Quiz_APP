@@ -15,6 +15,7 @@ class ResultsScreen extends StatelessWidget {
     for (var i = 0; i < chosenAnswers.length; i++) {
       summary.add(
         {
+          //keys
           'question_index': i,
           //questions[i].text stores the questions answers and text
           'questions': questions[i].text,
