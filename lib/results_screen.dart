@@ -4,7 +4,7 @@
 /// a `Container` with a `Column` of child widgets, including `Text` and `TextButton` widgets.
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
-import 'package:quiz_app/questions_summer.dart';
+import 'package:quiz_app/questions_summary/questions_summer.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
