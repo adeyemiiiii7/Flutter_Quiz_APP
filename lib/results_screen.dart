@@ -4,6 +4,7 @@
 /// a `Container` with a `Column` of child widgets, including `Text` and `TextButton` widgets.
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
+import 'package:quiz_app/questions_summer.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
@@ -32,10 +33,13 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final summaryData = getSummaryData();
+    final numTotalQuestions = questions.length;
+    final numCorrectQuestions = 0;
     return SizedBox(
       width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(40),
+        margin: const EdgeInsets.all(15),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -43,7 +47,7 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text("List of answers and questions.."),
+            QuestionsSummary(summaryData: getSummaryData()),
             const SizedBox(
               height: 30,
             ),
