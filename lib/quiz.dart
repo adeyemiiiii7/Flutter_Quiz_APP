@@ -72,7 +72,7 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: screenWidget,
+          child: screenWidget, 
         ),
       ),
     );
